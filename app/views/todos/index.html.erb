@@ -2,7 +2,7 @@
 <div class="col-md-6">
 	<h1>Index de ToDo</h1>
 <% @todos.each do |todo| %>
-	<div class="well">
+	<div class="well well-lg">
 		
 		<div class="row">
 			<div class="col-md-5">
@@ -15,20 +15,19 @@
 					  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" <%= "checked" if todo.completed %> disabled>
 				</div>
 			</div>
-			<div class="col-md-2 well">
-				<%= link_to "Ver", todo_path(todo) %>
-				<%= link_to "Editar", edit_todo_path(todo) %>
-				<%= link_to "Borrar", todo, method: :delete %>
+			<div class="col-md-3">
+				<%= link_to "Ver", todo_path(todo), class: "btn btn-default"%>
+				<%= link_to "Editar", edit_todo_path(todo), class: "btn btn-default" %>
+				<%= link_to "Borrar", todo, method: :delete, class: "btn btn-default" %>
 			</div>
-			<div class="col-md-3 well">
-				<%= link_to "Completado", complete_todo_path(todo) %>
+			<div class="col-md-2">
+				<%= link_to "Completado", complete_todo_path(todo), class: "btn btn-success" %>
 			</div>
-
 		</div>
 	</div>
 <% end %>
 </div>
 
 <div class="col-md-6">
-	<h2><%= link_to "Crear nuevo ToDo", new_todo_path %></h2>
+	<h2><%= link_to "Nuevo ToDo", new_todo_path, class: "btn btn-primary"%></h2>
 </div>
