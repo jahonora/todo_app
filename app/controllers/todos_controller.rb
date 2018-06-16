@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
 	def index
-		@todos = Todo.all
+		@todos = Todo.all.sort_by{|e| e.completed ? 1 : 0}
 	end
 
 	def new

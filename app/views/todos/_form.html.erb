@@ -2,10 +2,10 @@
 <%= form_with model: @todo, local: true, class: "well" do |f| %>
       <div class="row">
             <%= f.label :description, "Descripcion" %>
-            <%= f.text_area :description %>
+            <%= f.text_area :description, class: "form-control" %>
       </div>
       <br>
-      <%= f.submit "Enviar" %>
+      <%= f.submit "Enviar", class: "btn btn-default" %>
       <br>
 <% end %>
 </div>
