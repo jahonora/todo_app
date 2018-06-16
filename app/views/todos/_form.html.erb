@@ -1,0 +1,11 @@
+<div class="col-md-6">
+<%= form_with model: @todo, local: true, class: "well" do |f| %>
+      <div class="row">
+            <%= f.label :description, "Descripcion" %>
+            <%= f.text_area :description %>
+      </div>
+      <br>
+      <%= f.submit "Enviar" %>
+      <br>
+<% end %>
+</div>

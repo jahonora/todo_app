@@ -1,0 +1,43 @@
+
+<h1>Listado de ToDo</h1>
+<div class="col-md-6">
+<% @todos.each do |todo| %>
+	<% if !todo.completed %>
+		<div class="well">
+			<div class="row">
+				<div class="col-md-7">
+					<h3><%= todo.description%></h3>
+				</div>
+				<div class="col-md-1">
+					<br>
+					<br>
+					<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" <%= "checked" if todo.completed %> disabled>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+</div>
+
+<div class="col-md-6">
+	<% @todos.each do |todo| %>
+		<% if todo.completed %>
+			<div class="well">
+				<div class="row">
+					<div class="col-md-7">
+						<h3><%= todo.description%></h3>
+					</div>
+					<div class="col-md-1">
+						<br>
+						<br>
+						<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" <%= "checked" if todo.completed %> disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>
